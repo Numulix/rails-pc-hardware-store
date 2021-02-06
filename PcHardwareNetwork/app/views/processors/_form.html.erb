@@ -1,0 +1,62 @@
+<%= form_with(model: processor) do |form| %>
+  <% if processor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(processor.errors.count, "error") %> prohibited this processor from being saved:</h2>
+
+      <ul>
+        <% processor.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :brand %>
+    <%= form.text_field :brand %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :core_count %>
+    <%= form.number_field :core_count %>
+  </div>
+
+  <div class="field">
+    <%= form.label :core_clock %>
+    <%= form.text_field :core_clock %>
+  </div>
+
+  <div class="field">
+    <%= form.label :boost_clock %>
+    <%= form.text_field :boost_clock %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tdp %>
+    <%= form.number_field :tdp %>
+  </div>
+
+  <div class="field">
+    <%= form.label :integrated_graphics %>
+    <%= form.text_field :integrated_graphics %>
+  </div>
+
+  <div class="field">
+    <%= form.label :smt %>
+    <%= form.text_field :smt %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.number_field :price %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

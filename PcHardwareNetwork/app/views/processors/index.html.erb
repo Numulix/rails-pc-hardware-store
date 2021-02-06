@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Processors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Brand</th>
+      <th>Name</th>
+      <th>Core count</th>
+      <th>Core clock</th>
+      <th>Boost clock</th>
+      <th>Tdp</th>
+      <th>Integrated graphics</th>
+      <th>Smt</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @processors.each do |processor| %>
+      <tr>
+        <td><%= processor.brand %></td>
+        <td><%= processor.name %></td>
+        <td><%= processor.core_count %></td>
+        <td><%= processor.core_clock %></td>
+        <td><%= processor.boost_clock %></td>
+        <td><%= processor.tdp %></td>
+        <td><%= processor.integrated_graphics %></td>
+        <td><%= processor.smt %></td>
+        <td><%= processor.price %></td>
+        <td><%= link_to 'Show', processor %></td>
+        <td><%= link_to 'Edit', edit_processor_path(processor) %></td>
+        <td><%= link_to 'Destroy', processor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Processor', new_processor_path %>
