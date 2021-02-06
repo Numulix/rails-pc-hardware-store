@@ -24,10 +24,10 @@
         <td><%= motherboard.name %></td>
         <td><%= motherboard.socket %></td>
         <td><%= motherboard.form_factor %></td>
-        <td><%= motherboard.memory_max %></td>
+        <td><%= motherboard.memory_max %> GB</td>
         <td><%= motherboard.memory_slots %></td>
         <td><%= motherboard.color %></td>
-        <td><%= motherboard.price %></td>
+        <td>$<%= motherboard.price %></td>
         <td><%= link_to 'Show', motherboard %></td>
         <td><%= link_to 'Edit', edit_motherboard_path(motherboard) %></td>
         <td><%= link_to 'Destroy', motherboard, method: :delete, data: { confirm: 'Are you sure?' } %></td>

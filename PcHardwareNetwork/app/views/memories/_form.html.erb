@@ -1,4 +1,4 @@
-<%= form_with(model: memory) do |form| %>
+<%= bootstrap_form_with(model: memory) do |form| %>
   <% if memory.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(memory.errors.count, "error") %> prohibited this memory from being saved:</h2>
@@ -12,37 +12,30 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :brand %>
     <%= form.text_field :brand %>
   </div>
 
   <div class="field">
-    <%= form.label :name %>
     <%= form.text_field :name %>
   </div>
 
   <div class="field">
-    <%= form.label :speed %>
     <%= form.text_field :speed %>
   </div>
 
   <div class="field">
-    <%= form.label :size %>
     <%= form.number_field :size %>
   </div>
 
   <div class="field">
-    <%= form.label :color %>
     <%= form.text_field :color %>
   </div>
 
   <div class="field">
-    <%= form.label :cas_latency %>
     <%= form.number_field :cas_latency %>
   </div>
 
   <div class="field">
-    <%= form.label :price %>
     <%= form.number_field :price %>
   </div>
 

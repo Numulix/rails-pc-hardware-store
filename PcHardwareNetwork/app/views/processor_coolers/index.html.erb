@@ -21,11 +21,11 @@
       <tr>
         <td><%= processor_cooler.brand %></td>
         <td><%= processor_cooler.name %></td>
-        <td><%= processor_cooler.fan_rpm %></td>
-        <td><%= processor_cooler.noise_level %></td>
+        <td><%= processor_cooler.fan_rpm %> RPM</td>
+        <td><%= processor_cooler.noise_level %> dB</td>
         <td><%= processor_cooler.color %></td>
-        <td><%= processor_cooler.radiator_size %></td>
-        <td><%= processor_cooler.price %></td>
+        <td><%= processor_cooler.radiator_size %> mm</td>
+        <td>$<%= processor_cooler.price %></td>
         <td><%= link_to 'Show', processor_cooler %></td>
         <td><%= link_to 'Edit', edit_processor_cooler_path(processor_cooler) %></td>
         <td><%= link_to 'Destroy', processor_cooler, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -10,7 +10,71 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_06_124048) do
+ActiveRecord::Schema.define(version: 2021_02_06_155603) do
+
+  create_table "cases", force: :cascade do |t|
+    t.string "brand"
+    t.string "name"
+    t.string "type"
+    t.string "color"
+    t.string "power_supply"
+    t.string "side_panel_window"
+    t.integer "external_bays"
+    t.integer "internal_bays"
+    t.integer "price"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "memories", force: :cascade do |t|
+    t.string "brand"
+    t.string "name"
+    t.string "speed"
+    t.integer "size"
+    t.string "color"
+    t.integer "cas_latency"
+    t.integer "price"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "motherboards", force: :cascade do |t|
+    t.string "brand"
+    t.string "name"
+    t.string "socket"
+    t.string "form_factor"
+    t.integer "memory_max"
+    t.integer "memory_slots"
+    t.string "color"
+    t.integer "price"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "power_supplies", force: :cascade do |t|
+    t.string "brand"
+    t.string "name"
+    t.string "form_factor"
+    t.string "efficiency_rating"
+    t.integer "wattage"
+    t.string "modular"
+    t.string "color"
+    t.integer "price"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "processor_coolers", force: :cascade do |t|
+    t.string "brand"
+    t.string "name"
+    t.integer "fan_rpm"
+    t.integer "noise_level"
+    t.string "color"
+    t.integer "radiator_size"
+    t.integer "price"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "processors", force: :cascade do |t|
     t.string "brand"
@@ -21,6 +85,33 @@ ActiveRecord::Schema.define(version: 2021_02_06_124048) do
     t.integer "tdp"
     t.string "integrated_graphics"
     t.string "smt"
+    t.integer "price"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "storages", force: :cascade do |t|
+    t.string "brand"
+    t.string "name"
+    t.integer "capacity"
+    t.string "type"
+    t.integer "cache"
+    t.string "form_factor"
+    t.string "interface"
+    t.integer "price"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "video_cards", force: :cascade do |t|
+    t.string "brand"
+    t.string "name"
+    t.string "chipset"
+    t.integer "memory"
+    t.integer "core_clock"
+    t.integer "boost_clock"
+    t.string "color"
+    t.integer "length"
     t.integer "price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

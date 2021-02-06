@@ -1,4 +1,4 @@
-<%= form_with(model: power_supply) do |form| %>
+<%= bootstrap_form_with(model: power_supply) do |form| %>
   <% if power_supply.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(power_supply.errors.count, "error") %> prohibited this power_supply from being saved:</h2>
@@ -12,42 +12,34 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :brand %>
     <%= form.text_field :brand %>
   </div>
 
   <div class="field">
-    <%= form.label :name %>
     <%= form.text_field :name %>
   </div>
 
   <div class="field">
-    <%= form.label :form_factor %>
     <%= form.text_field :form_factor %>
   </div>
 
   <div class="field">
-    <%= form.label :efficiency_rating %>
     <%= form.text_field :efficiency_rating %>
   </div>
 
   <div class="field">
-    <%= form.label :wattage %>
     <%= form.number_field :wattage %>
   </div>
 
   <div class="field">
-    <%= form.label :modular %>
     <%= form.text_field :modular %>
   </div>
 
   <div class="field">
-    <%= form.label :color %>
     <%= form.text_field :color %>
   </div>
 
   <div class="field">
-    <%= form.label :price %>
     <%= form.number_field :price %>
   </div>
 
