@@ -1,0 +1,52 @@
+<%= form_with(model: processor_cooler) do |form| %>
+  <% if processor_cooler.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(processor_cooler.errors.count, "error") %> prohibited this processor_cooler from being saved:</h2>
+
+      <ul>
+        <% processor_cooler.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :brand %>
+    <%= form.text_field :brand %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fan_rpm %>
+    <%= form.number_field :fan_rpm %>
+  </div>
+
+  <div class="field">
+    <%= form.label :noise_level %>
+    <%= form.number_field :noise_level %>
+  </div>
+
+  <div class="field">
+    <%= form.label :color %>
+    <%= form.text_field :color %>
+  </div>
+
+  <div class="field">
+    <%= form.label :radiator_size %>
+    <%= form.number_field :radiator_size %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.number_field :price %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

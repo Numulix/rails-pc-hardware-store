@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @storage.brand %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @storage.name %>
+</p>
+
+<p>
+  <strong>Capacity:</strong>
+  <%= @storage.capacity %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @storage.type %>
+</p>
+
+<p>
+  <strong>Cache:</strong>
+  <%= @storage.cache %>
+</p>
+
+<p>
+  <strong>Form factor:</strong>
+  <%= @storage.form_factor %>
+</p>
+
+<p>
+  <strong>Interface:</strong>
+  <%= @storage.interface %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @storage.price %>
+</p>
+
+<%= link_to 'Edit', edit_storage_path(@storage) %> |
+<%= link_to 'Back', storages_path %>

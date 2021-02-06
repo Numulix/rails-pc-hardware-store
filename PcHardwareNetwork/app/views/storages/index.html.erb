@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Storages</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Brand</th>
+      <th>Name</th>
+      <th>Capacity</th>
+      <th>Type</th>
+      <th>Cache</th>
+      <th>Form factor</th>
+      <th>Interface</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @storages.each do |storage| %>
+      <tr>
+        <td><%= storage.brand %></td>
+        <td><%= storage.name %></td>
+        <td><%= storage.capacity %></td>
+        <td><%= storage.type %></td>
+        <td><%= storage.cache %></td>
+        <td><%= storage.form_factor %></td>
+        <td><%= storage.interface %></td>
+        <td><%= storage.price %></td>
+        <td><%= link_to 'Show', storage %></td>
+        <td><%= link_to 'Edit', edit_storage_path(storage) %></td>
+        <td><%= link_to 'Destroy', storage, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Storage', new_storage_path %>

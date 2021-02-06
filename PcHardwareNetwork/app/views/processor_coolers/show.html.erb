@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @processor_cooler.brand %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @processor_cooler.name %>
+</p>
+
+<p>
+  <strong>Fan rpm:</strong>
+  <%= @processor_cooler.fan_rpm %>
+</p>
+
+<p>
+  <strong>Noise level:</strong>
+  <%= @processor_cooler.noise_level %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @processor_cooler.color %>
+</p>
+
+<p>
+  <strong>Radiator size:</strong>
+  <%= @processor_cooler.radiator_size %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @processor_cooler.price %>
+</p>
+
+<%= link_to 'Edit', edit_processor_cooler_path(@processor_cooler) %> |
+<%= link_to 'Back', processor_coolers_path %>

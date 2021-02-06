@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @motherboard.brand %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @motherboard.name %>
+</p>
+
+<p>
+  <strong>Socket:</strong>
+  <%= @motherboard.socket %>
+</p>
+
+<p>
+  <strong>Form factor:</strong>
+  <%= @motherboard.form_factor %>
+</p>
+
+<p>
+  <strong>Memory max:</strong>
+  <%= @motherboard.memory_max %>
+</p>
+
+<p>
+  <strong>Memory slots:</strong>
+  <%= @motherboard.memory_slots %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @motherboard.color %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @motherboard.price %>
+</p>
+
+<%= link_to 'Edit', edit_motherboard_path(@motherboard) %> |
+<%= link_to 'Back', motherboards_path %>

@@ -1,0 +1,2 @@
+class ProcessorCooler < ApplicationRecord
+end

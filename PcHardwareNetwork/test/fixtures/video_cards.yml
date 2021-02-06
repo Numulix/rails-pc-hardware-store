@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  brand: MyString
+  name: MyString
+  chipset: MyString
+  memory: 1
+  core_clock: 1
+  boost_clock: 1
+  color: MyString
+  length: 1
+  price: 1
+
+two:
+  brand: MyString
+  name: MyString
+  chipset: MyString
+  memory: 1
+  core_clock: 1
+  boost_clock: 1
+  color: MyString
+  length: 1
+  price: 1

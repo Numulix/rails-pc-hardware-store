@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  brand: MyString
+  name: MyString
+  fan_rpm: 1
+  noise_level: 1
+  color: MyString
+  radiator_size: 1
+  price: 1
+
+two:
+  brand: MyString
+  name: MyString
+  fan_rpm: 1
+  noise_level: 1
+  color: MyString
+  radiator_size: 1
+  price: 1

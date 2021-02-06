@@ -1,0 +1,57 @@
+<%= form_with(model: motherboard) do |form| %>
+  <% if motherboard.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(motherboard.errors.count, "error") %> prohibited this motherboard from being saved:</h2>
+
+      <ul>
+        <% motherboard.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :brand %>
+    <%= form.text_field :brand %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :socket %>
+    <%= form.text_field :socket %>
+  </div>
+
+  <div class="field">
+    <%= form.label :form_factor %>
+    <%= form.text_field :form_factor %>
+  </div>
+
+  <div class="field">
+    <%= form.label :memory_max %>
+    <%= form.number_field :memory_max %>
+  </div>
+
+  <div class="field">
+    <%= form.label :memory_slots %>
+    <%= form.number_field :memory_slots %>
+  </div>
+
+  <div class="field">
+    <%= form.label :color %>
+    <%= form.text_field :color %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.number_field :price %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

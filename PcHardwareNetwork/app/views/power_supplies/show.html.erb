@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @power_supply.brand %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @power_supply.name %>
+</p>
+
+<p>
+  <strong>Form factor:</strong>
+  <%= @power_supply.form_factor %>
+</p>
+
+<p>
+  <strong>Efficiency rating:</strong>
+  <%= @power_supply.efficiency_rating %>
+</p>
+
+<p>
+  <strong>Wattage:</strong>
+  <%= @power_supply.wattage %>
+</p>
+
+<p>
+  <strong>Modular:</strong>
+  <%= @power_supply.modular %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @power_supply.color %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @power_supply.price %>
+</p>
+
+<%= link_to 'Edit', edit_power_supply_path(@power_supply) %> |
+<%= link_to 'Back', power_supplies_path %>

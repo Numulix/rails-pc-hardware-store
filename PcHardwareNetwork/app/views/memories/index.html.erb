@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Memories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Brand</th>
+      <th>Name</th>
+      <th>Speed</th>
+      <th>Size</th>
+      <th>Color</th>
+      <th>Cas latency</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @memories.each do |memory| %>
+      <tr>
+        <td><%= memory.brand %></td>
+        <td><%= memory.name %></td>
+        <td><%= memory.speed %></td>
+        <td><%= memory.size %></td>
+        <td><%= memory.color %></td>
+        <td><%= memory.cas_latency %></td>
+        <td><%= memory.price %></td>
+        <td><%= link_to 'Show', memory %></td>
+        <td><%= link_to 'Edit', edit_memory_path(memory) %></td>
+        <td><%= link_to 'Destroy', memory, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Memory', new_memory_path %>

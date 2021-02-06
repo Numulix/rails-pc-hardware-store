@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Video Cards</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Brand</th>
+      <th>Name</th>
+      <th>Chipset</th>
+      <th>Memory</th>
+      <th>Core clock</th>
+      <th>Boost clock</th>
+      <th>Color</th>
+      <th>Length</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @video_cards.each do |video_card| %>
+      <tr>
+        <td><%= video_card.brand %></td>
+        <td><%= video_card.name %></td>
+        <td><%= video_card.chipset %></td>
+        <td><%= video_card.memory %></td>
+        <td><%= video_card.core_clock %></td>
+        <td><%= video_card.boost_clock %></td>
+        <td><%= video_card.color %></td>
+        <td><%= video_card.length %></td>
+        <td><%= video_card.price %></td>
+        <td><%= link_to 'Show', video_card %></td>
+        <td><%= link_to 'Edit', edit_video_card_path(video_card) %></td>
+        <td><%= link_to 'Destroy', video_card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Video Card', new_video_card_path %>

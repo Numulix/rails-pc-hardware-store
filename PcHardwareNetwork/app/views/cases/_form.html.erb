@@ -1,0 +1,62 @@
+<%= form_with(model: case) do |form| %>
+  <% if case.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(case.errors.count, "error") %> prohibited this case from being saved:</h2>
+
+      <ul>
+        <% case.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :brand %>
+    <%= form.text_field :brand %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :type %>
+    <%= form.text_field :type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :color %>
+    <%= form.text_field :color %>
+  </div>
+
+  <div class="field">
+    <%= form.label :power_supply %>
+    <%= form.text_field :power_supply %>
+  </div>
+
+  <div class="field">
+    <%= form.label :side_panel_window %>
+    <%= form.text_field :side_panel_window %>
+  </div>
+
+  <div class="field">
+    <%= form.label :external_bays %>
+    <%= form.number_field :external_bays %>
+  </div>
+
+  <div class="field">
+    <%= form.label :internal_bays %>
+    <%= form.number_field :internal_bays %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.number_field :price %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

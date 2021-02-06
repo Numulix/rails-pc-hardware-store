@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @memory.brand %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @memory.name %>
+</p>
+
+<p>
+  <strong>Speed:</strong>
+  <%= @memory.speed %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @memory.size %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @memory.color %>
+</p>
+
+<p>
+  <strong>Cas latency:</strong>
+  <%= @memory.cas_latency %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @memory.price %>
+</p>
+
+<%= link_to 'Edit', edit_memory_path(@memory) %> |
+<%= link_to 'Back', memories_path %>

@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @case.brand %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @case.name %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @case.type %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @case.color %>
+</p>
+
+<p>
+  <strong>Power supply:</strong>
+  <%= @case.power_supply %>
+</p>
+
+<p>
+  <strong>Side panel window:</strong>
+  <%= @case.side_panel_window %>
+</p>
+
+<p>
+  <strong>External bays:</strong>
+  <%= @case.external_bays %>
+</p>
+
+<p>
+  <strong>Internal bays:</strong>
+  <%= @case.internal_bays %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @case.price %>
+</p>
+
+<%= link_to 'Edit', edit_case_path(@case) %> |
+<%= link_to 'Back', cases_path %>
