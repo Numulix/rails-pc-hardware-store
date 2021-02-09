@@ -1,0 +1,25 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  user_id: 1
+  processor_id: 1
+  processor_cooler_id: 1
+  video_card_id: 1
+  memory_id: 1
+  motherboard_id: 1
+  power_supply_id: 1
+  storage_id: 1
+  case_id: 1
+
+two:
+  name: MyString
+  user_id: 1
+  processor_id: 1
+  processor_cooler_id: 1
+  video_card_id: 1
+  memory_id: 1
+  motherboard_id: 1
+  power_supply_id: 1
+  storage_id: 1
+  case_id: 1

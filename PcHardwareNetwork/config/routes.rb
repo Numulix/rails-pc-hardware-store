@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :motherboards
   resources :processor_coolers
   resources :processors
+  resources :builds
   root 'static_pages#home'
   match '/users', to: 'users#index', via: 'get'
   match '/users/:id', to: 'users#show', via: 'get'

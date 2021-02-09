@@ -1,0 +1,61 @@
+<%= bootstrap_form_with(model: build) do |form| %>
+  <% if build.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(build.errors.count, "error") %> prohibited this case from being saved:</h2>
+
+      <ul>
+        <% build.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.text_field :name %>
+  </div>
+    <br/>
+  <div class="field">
+    <%= form.label :processor_id %>
+    <%= select_tag(:processor_id, options_for_select(@processors), :prompt => "Select a CPU") %>
+  </div>
+    <br/>
+    <div class="field">
+    <%= form.label :processor_cooler_id %>
+    <%= select_tag(:processor_cooler_id, options_for_select(@processor_coolers), :prompt => "Select a CPU cooler") %>
+  </div>
+    <br/>
+    <div class="field">
+    <%= form.label :video_card_id %>
+    <%= select_tag(:video_card_id, options_for_select(@video_cards), :prompt => "Select a GPU") %>
+  </div>
+    <br/>
+    <div class="field">
+    <%= form.label :memory_id %>
+    <%= select_tag(:memory_id, options_for_select(@memories), :prompt => "Select RAM") %>
+  </div>
+    <br/>
+    <div class="field">
+    <%= form.label :motherboard_id %>
+    <%= select_tag(:motherboard_id, options_for_select(@motherboards), :prompt => "Select a motherboard") %>
+  </div>
+    <br/>
+    <div class="field">
+    <%= form.label :power_supply_id %>
+    <%= select_tag(:power_supply_id, options_for_select(@power_supplies), :prompt => "Select a PSU") %>
+  </div>
+    <br/>
+    <div class="field">
+    <%= form.label :storage_id %>
+    <%= select_tag(:storage_id, options_for_select(@storages), :prompt => "Select a storage device") %>
+  </div>
+    <br/>
+    <div class="field">
+    <%= form.label :case_id %>
+    <%= select_tag(:case_id, options_for_select(@cases), :prompt => "Select a case") %>
+  </div>
+    <br/>
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
