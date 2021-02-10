@@ -22,14 +22,14 @@
     <% @builds.each do |build| %>
       <tr>
         <td><%= build.name %></td>
-        <td><%= build.processor.name %></td>
-        <td><%= build.processor_cooler.name %></td>
-        <td><%= build.video_card.name %></td>
-        <td><%= build.memory.name %></td>
-        <td><%= build.storage.name %></td>
-        <td><%= build.power_supply.name %></td>
-        <td><%= build.motherboard.name %></td>
-        <td><%= build.pc_case.name %></td>
+        <td><%= link_to build.processor.name, processor_path(build.processor.id) %></td>
+        <td><%= link_to build.processor_cooler.name, processor_cooler_path(build.processor_cooler.id) %></td>
+        <td><%= link_to build.video_card.name, video_card_path(build.video_card.id) %></td>
+        <td><%= link_to build.memory.name, memory_path(build.memory.id) %></td>
+        <td><%= link_to build.storage.name, storage_path(build.storage.id) %></td>
+        <td><%= link_to build.power_supply.name, power_supply_path(build.power_supply.id) %></td>
+        <td><%= link_to build.motherboard.name, motherboard_path(build.motherboard.id) %></td>
+        <td><%= link_to build.pc_case.name, pc_case_path(build.pc_case.id) %></td>
         <td><%= link_to 'Show', build %></td>
         <td><%= link_to 'Edit', edit_build_path(build) %></td>
         <td><%= link_to 'Destroy', build, method: :delete, data: { confirm: 'Are you sure?' } %></td>

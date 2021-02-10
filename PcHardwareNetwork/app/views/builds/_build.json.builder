@@ -1,0 +1,2 @@
+json.extract! build, :id, :user_id, :processor_id, :pc_case_id, :processor_cooler_id, :video_card_id, :memory_id, :storage_id, :motherboard_id, :power_supply_id, :created_at, :updated_at 
+json.url build_url(build, format: :json)

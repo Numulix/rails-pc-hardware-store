@@ -1,0 +1,1 @@
+json.array! @build, partial: "builds/build", as: :build

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_10_164111) do
+ActiveRecord::Schema.define(version: 2021_02_10_204050) do
 
   create_table "builds", force: :cascade do |t|
     t.string "name"
@@ -160,5 +160,6 @@ ActiveRecord::Schema.define(version: 2021_02_10_164111) do
   add_foreign_key "builds", "processor_coolers"
   add_foreign_key "builds", "processors"
   add_foreign_key "builds", "storages"
+  add_foreign_key "builds", "users"
   add_foreign_key "builds", "video_cards"
 end

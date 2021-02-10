@@ -1,6 +1,52 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<h1>
     <strong>Name:</strong>
     <%= @build.name %>
-</p>
+</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Part</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td><%= @build.processor.name %></td>
+            <td>$<%= @build.processor.price %></td>
+        </tr>
+        <tr>
+            <td><%= @build.processor_cooler.name %></td>
+            <td>$<%= @build.processor_cooler.price %></td>
+        </tr>
+        <tr>
+            <td><%= @build.video_card.name %></td>
+            <td>$<%= @build.video_card.price %></td>
+        </tr>
+        <tr>
+            <td><%= @build.memory.name %></td>
+            <td>$<%= @build.memory.price %></td>
+        </tr>
+        <tr>
+            <td><%= @build.storage.name %></td>
+            <td>$<%= @build.storage.price %></td>
+        </tr>
+        <tr>
+            <td><%= @build.power_supply.name %></td>
+            <td>$<%= @build.power_supply.price %></td>
+        </tr>
+        <tr>
+            <td><%= @build.motherboard.name %></td>
+            <td>$<%= @build.motherboard.price %></td>
+        </tr>
+        <tr>
+            <td><%= @build.pc_case.name %></td>
+            <td>$<%= @build.pc_case.price %></td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 class="text-end"><strong>Total: </strong>$ <%= total_price(@build) %></h2>
