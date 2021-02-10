@@ -18,7 +18,7 @@ class BuildsController < ApplicationController
         @motherboards = Motherboard.all.map { |p| [p.name, p.id] }
         @power_supplies = PowerSupply.all.map { |p| [p.name, p.id] }
         @storages = Storage.all.map { |p| [p.name, p.id] }
-        @cases = Case.all.map { |p| [p.name, p.id] }
+        @pc_cases = PcCase.all.map { |p| [p.name, p.id] }
     end
 
     def edit
@@ -34,15 +34,15 @@ class BuildsController < ApplicationController
         @build.motherboard_id = params[:motherboard_id]
         @build.power_supply_id = params[:power_supply_id]
         @build.storage_id = params[:storage_id]
-        @build.case_id = params[:case_id]
+        @build.pc_case_id = params[:pc_case_id]
 
         respond_to do |format|
             if @build.save
                 format.html { redirect_to @build, notice: "Build was successfully created." }
-                format.json { render :show, status: :created, location: @build }
+                # format.json { render :show, status: :created, location: @build }
             else
                 format.html { render :edit, status: :unprocessable_entity }
-                format.json { render json: @build.errors, status: :unprocessable_entity }
+                # format.json { render json: @build.errors, status: :unprocessable_entity }
             end
         end
     end
@@ -51,7 +51,7 @@ class BuildsController < ApplicationController
         @build.destroy
         respond_to do |format|
             format.html { redirect_to builds_url, notice: "Build was successfully destroyed." }
-            format.json { head :no_content }
+            # format.json { head :no_content }
         end
     end
 
@@ -62,6 +62,6 @@ class BuildsController < ApplicationController
         end
 
         def build_params
-            params.require(:build).permit(:name, :processor_id, :processor_cooler_id, :video_card_id, :memory_id, :motherboard_id, :power_supply_id, :storage_id, :case_id)
+            params.require(:build).permit(:name, :processor_id, :processor_cooler_id, :video_card_id, :memory_id, :motherboard_id, :power_supply_id, :storage_id, :pc_case_id)
         end
 end

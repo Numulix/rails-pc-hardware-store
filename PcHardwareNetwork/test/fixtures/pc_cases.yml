@@ -3,7 +3,7 @@
 one:
   brand: MyString
   name: MyString
-  type: 
+  case_type: MyString
   color: MyString
   power_supply: MyString
   side_panel_window: MyString
@@ -14,7 +14,7 @@ one:
 two:
   brand: MyString
   name: MyString
-  type: 
+  case_type: MyString
   color: MyString
   power_supply: MyString
   side_panel_window: MyString

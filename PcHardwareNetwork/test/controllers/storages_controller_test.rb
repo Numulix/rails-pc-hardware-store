@@ -17,7 +17,7 @@ class StoragesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create storage" do
     assert_difference('Storage.count') do
-      post storages_url, params: { storage: { brand: @storage.brand, cache: @storage.cache, capacity: @storage.capacity, form_factor: @storage.form_factor, interface: @storage.interface, name: @storage.name, price: @storage.price, type: @storage.type } }
+      post storages_url, params: { storage: { brand: @storage.brand, cache: @storage.cache, capacity: @storage.capacity, form_factor: @storage.form_factor, interface: @storage.interface, name: @storage.name, price: @storage.price, storage_type: @storage.storage_type } }
     end
 
     assert_redirected_to storage_url(Storage.last)
@@ -34,7 +34,7 @@ class StoragesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update storage" do
-    patch storage_url(@storage), params: { storage: { brand: @storage.brand, cache: @storage.cache, capacity: @storage.capacity, form_factor: @storage.form_factor, interface: @storage.interface, name: @storage.name, price: @storage.price, type: @storage.type } }
+    patch storage_url(@storage), params: { storage: { brand: @storage.brand, cache: @storage.cache, capacity: @storage.capacity, form_factor: @storage.form_factor, interface: @storage.interface, name: @storage.name, price: @storage.price, storage_type: @storage.storage_type } }
     assert_redirected_to storage_url(@storage)
   end
 

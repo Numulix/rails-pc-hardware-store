@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pc Cases</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Brand</th>
+      <th>Name</th>
+      <th>Case type</th>
+      <th>Color</th>
+      <th>Power supply</th>
+      <th>Side panel window</th>
+      <th>External bays</th>
+      <th>Internal bays</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pc_cases.each do |pc_case| %>
+      <tr>
+        <td><%= pc_case.brand %></td>
+        <td><%= pc_case.name %></td>
+        <td><%= pc_case.case_type %></td>
+        <td><%= pc_case.color %></td>
+        <td><%= pc_case.power_supply %></td>
+        <td><%= pc_case.side_panel_window %></td>
+        <td><%= pc_case.external_bays %></td>
+        <td><%= pc_case.internal_bays %></td>
+        <td><%= pc_case.price %></td>
+        <td><%= link_to 'Show', pc_case %></td>
+        <td><%= link_to 'Edit', edit_pc_case_path(pc_case) %></td>
+        <td><%= link_to 'Destroy', pc_case, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pc Case', new_pc_case_path %>

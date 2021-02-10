@@ -10,35 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_09_121730) do
+ActiveRecord::Schema.define(version: 2021_02_10_115447) do
 
   create_table "builds", force: :cascade do |t|
     t.string "name"
     t.integer "user_id"
-    t.integer "processor_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.integer "processor_cooler_id"
     t.integer "video_card_id"
     t.integer "memory_id"
-    t.integer "motherboard_id"
-    t.integer "power_supply_id"
     t.integer "storage_id"
-    t.integer "case_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "cases", force: :cascade do |t|
-    t.string "brand"
-    t.string "name"
-    t.string "type"
-    t.string "color"
-    t.string "power_supply"
-    t.string "side_panel_window"
-    t.integer "external_bays"
-    t.integer "internal_bays"
-    t.integer "price"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.integer "power_supply_id"
+    t.integer "motherboard_id"
+    t.integer "processor_id"
+    t.integer "pc_case_id"
+    t.index ["memory_id"], name: "index_builds_on_memory_id"
+    t.index ["motherboard_id"], name: "index_builds_on_motherboard_id"
+    t.index ["pc_case_id"], name: "index_builds_on_pc_case_id"
+    t.index ["power_supply_id"], name: "index_builds_on_power_supply_id"
+    t.index ["processor_cooler_id"], name: "index_builds_on_processor_cooler_id"
+    t.index ["processor_id"], name: "index_builds_on_processor_id"
+    t.index ["storage_id"], name: "index_builds_on_storage_id"
+    t.index ["video_card_id"], name: "index_builds_on_video_card_id"
   end
 
   create_table "memories", force: :cascade do |t|
@@ -61,6 +55,20 @@ ActiveRecord::Schema.define(version: 2021_02_09_121730) do
     t.integer "memory_max"
     t.integer "memory_slots"
     t.string "color"
+    t.integer "price"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "pc_cases", force: :cascade do |t|
+    t.string "brand"
+    t.string "name"
+    t.string "case_type"
+    t.string "color"
+    t.string "power_supply"
+    t.string "side_panel_window"
+    t.integer "external_bays"
+    t.integer "internal_bays"
     t.integer "price"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -109,7 +117,7 @@ ActiveRecord::Schema.define(version: 2021_02_09_121730) do
     t.string "brand"
     t.string "name"
     t.integer "capacity"
-    t.string "type"
+    t.string "storage_type"
     t.integer "cache"
     t.string "form_factor"
     t.string "interface"
@@ -145,4 +153,5 @@ ActiveRecord::Schema.define(version: 2021_02_09_121730) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "builds", "processors"
 end

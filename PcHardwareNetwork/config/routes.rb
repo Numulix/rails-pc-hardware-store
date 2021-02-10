@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
+  resources :storages
+  resources :pc_cases
   get 'users/index'
   devise_for :users
-  resources :cases
   resources :power_supplies
   resources :video_cards
-  resources :storages
   resources :memories
   resources :motherboards
   resources :processor_coolers

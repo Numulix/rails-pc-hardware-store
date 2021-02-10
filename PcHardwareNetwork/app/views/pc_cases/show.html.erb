@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Brand:</strong>
+  <%= @pc_case.brand %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pc_case.name %>
+</p>
+
+<p>
+  <strong>Case type:</strong>
+  <%= @pc_case.case_type %>
+</p>
+
+<p>
+  <strong>Color:</strong>
+  <%= @pc_case.color %>
+</p>
+
+<p>
+  <strong>Power supply:</strong>
+  <%= @pc_case.power_supply %>
+</p>
+
+<p>
+  <strong>Side panel window:</strong>
+  <%= @pc_case.side_panel_window %>
+</p>
+
+<p>
+  <strong>External bays:</strong>
+  <%= @pc_case.external_bays %>
+</p>
+
+<p>
+  <strong>Internal bays:</strong>
+  <%= @pc_case.internal_bays %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @pc_case.price %>
+</p>
+
+<%= link_to 'Edit', edit_pc_case_path(@pc_case) %> |
+<%= link_to 'Back', pc_cases_path %>

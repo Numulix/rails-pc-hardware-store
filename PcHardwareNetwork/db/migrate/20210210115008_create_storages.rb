@@ -4,7 +4,7 @@ class CreateStorages < ActiveRecord::Migration[6.1]
       t.string :brand
       t.string :name
       t.integer :capacity
-      t.string :type
+      t.string :storage_type
       t.integer :cache
       t.string :form_factor
       t.string :interface

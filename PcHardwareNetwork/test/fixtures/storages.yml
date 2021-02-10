@@ -4,7 +4,7 @@ one:
   brand: MyString
   name: MyString
   capacity: 1
-  type: 
+  storage_type: MyString
   cache: 1
   form_factor: MyString
   interface: MyString
@@ -14,7 +14,7 @@ two:
   brand: MyString
   name: MyString
   capacity: 1
-  type: 
+  storage_type: MyString
   cache: 1
   form_factor: MyString
   interface: MyString

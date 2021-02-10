@@ -21,7 +21,7 @@ class StoragesTest < ApplicationSystemTestCase
     fill_in "Interface", with: @storage.interface
     fill_in "Name", with: @storage.name
     fill_in "Price", with: @storage.price
-    fill_in "Type", with: @storage.type
+    fill_in "Storage type", with: @storage.storage_type
     click_on "Create Storage"
 
     assert_text "Storage was successfully created"
@@ -39,7 +39,7 @@ class StoragesTest < ApplicationSystemTestCase
     fill_in "Interface", with: @storage.interface
     fill_in "Name", with: @storage.name
     fill_in "Price", with: @storage.price
-    fill_in "Type", with: @storage.type
+    fill_in "Storage type", with: @storage.storage_type
     click_on "Update Storage"
 
     assert_text "Storage was successfully updated"

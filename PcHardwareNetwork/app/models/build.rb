@@ -1,13 +1,11 @@
 class Build < ApplicationRecord
-end
-class Build < ApplicationRecord
-    has_one :user
-    has_one :processor
-    has_one :processor_cooler
-    has_one :video_card
-    has_one :memory
-    has_one :motherboard
-    has_one :power_supply
-    has_one :storage
-    has_one :case
+    belongs_to :user
+    belongs_to :processor
+    belongs_to :processor_cooler
+    belongs_to :video_card
+    belongs_to :memory
+    belongs_to :motherboard
+    belongs_to :power_supply
+    belongs_to :storage
+    belongs_to :pc_case
 end
