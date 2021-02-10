@@ -23,8 +23,15 @@
       <tr>
         <td><%= build.name %></td>
         <td><%= build.processor.name %></td>
+        <td><%= build.processor_cooler.name %></td>
+        <td><%= build.video_card.name %></td>
+        <td><%= build.memory.name %></td>
+        <td><%= build.storage.name %></td>
+        <td><%= build.power_supply.name %></td>
+        <td><%= build.motherboard.name %></td>
+        <td><%= build.pc_case.name %></td>
         <td><%= link_to 'Show', build %></td>
-        <td><%= link_to 'Edit', edit_motherboard_path(build) %></td>
+        <td><%= link_to 'Edit', edit_build_path(build) %></td>
         <td><%= link_to 'Destroy', build, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>

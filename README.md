@@ -2,10 +2,10 @@
 This project was done as a university assignment for the course Scripting Languages
 
 # TODO Tasks
-- [ ] **At least 10 table models** (IMPORTANT)
+- [X] **At least 10 table models** (IMPORTANT)
 - [ ] Deployed on Heroku
 - [ ] Seeded database
-- [ ] Login/Logout/Register/RememberMe implemented
+- [X] Login/Logout/Register/RememberMe implemented
 - [ ] Must have a user with admin permissions (Adding new products to the database)
 - [X] Use Bootstrap for HTML/CSS
 - [ ] Arbitrary number of one-to-many relations inside the database

@@ -17,42 +17,42 @@
     <br/>
   <div class="field">
     <%= form.label :processor_id %>
-    <%= select_tag(:processor_id, options_for_select(@processors), :prompt => "Select a CPU") %>
+    <%= select_tag(:processor_id, options_for_select(Processor.all.map { |p| [p.name, p.id] }), :prompt => "Select a CPU") %>
   </div>
     <br/>
     <div class="field">
     <%= form.label :processor_cooler_id %>
-    <%= select_tag(:processor_cooler_id, options_for_select(@processor_coolers), :prompt => "Select a CPU cooler") %>
+    <%= select_tag(:processor_cooler_id, options_for_select(ProcessorCooler.all.map { |p| [p.name, p.id] }), :prompt => "Select a CPU Cooler") %>
   </div>
     <br/>
     <div class="field">
     <%= form.label :video_card_id %>
-    <%= select_tag(:video_card_id, options_for_select(@video_cards), :prompt => "Select a GPU") %>
+    <%= select_tag(:video_card_id, options_for_select(VideoCard.all.map { |p| [p.name, p.id] }), :prompt => "Select a GPU") %>
   </div>
     <br/>
     <div class="field">
     <%= form.label :memory_id %>
-    <%= select_tag(:memory_id, options_for_select(@memories), :prompt => "Select RAM") %>
+    <%= select_tag(:memory_id, options_for_select(Memory.all.map { |p| [p.name, p.id] }), :prompt => "Select RAM") %>
   </div>
     <br/>
     <div class="field">
     <%= form.label :motherboard_id %>
-    <%= select_tag(:motherboard_id, options_for_select(@motherboards), :prompt => "Select a motherboard") %>
+    <%= select_tag(:motherboard_id, options_for_select(Motherboard.all.map { |p| [p.name, p.id] }), :prompt => "Select a motherboard") %>
   </div>
     <br/>
     <div class="field">
     <%= form.label :power_supply_id %>
-    <%= select_tag(:power_supply_id, options_for_select(@power_supplies), :prompt => "Select a PSU") %>
+    <%= select_tag(:power_supply_id, options_for_select(PowerSupply.all.map { |p| [p.name, p.id] }), :prompt => "Select a PSU") %>
   </div>
     <br/>
     <div class="field">
     <%= form.label :storage_id %>
-    <%= select_tag(:storage_id, options_for_select(@storages), :prompt => "Select a storage device") %>
+    <%= select_tag(:storage_id, options_for_select(Storage.all.map { |p| [p.name, p.id] }), :prompt => "Select a storage device") %>
   </div>
     <br/>
     <div class="field">
     <%= form.label :pc_case_id %>
-    <%= select_tag(:pc_case_id, options_for_select(@pc_cases), :prompt => "Select a case") %>
+    <%= select_tag(:pc_case_id, options_for_select(PcCase.all.map { |p| [p.name, p.id] }), :prompt => "Select a case") %>
   </div>
     <br/>
   <div class="actions">
