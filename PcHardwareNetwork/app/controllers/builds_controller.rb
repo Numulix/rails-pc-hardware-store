@@ -11,14 +11,6 @@ class BuildsController < ApplicationController
 
     def new
         @build = current_user.builds.build
-        @processors = Processor.all.map { |p| [p.name, p.id] }
-        @processor_coolers = ProcessorCooler.all.map { |p| [p.name, p.id] }
-        @video_cards = VideoCard.all.map { |p| [p.name, p.id] }
-        @memories = Memory.all.map { |p| [p.name, p.id] }
-        @motherboards = Motherboard.all.map { |p| [p.name, p.id] }
-        @power_supplies = PowerSupply.all.map { |p| [p.name, p.id] }
-        @storages = Storage.all.map { |p| [p.name, p.id] }
-        @pc_cases = PcCase.all.map { |p| [p.name, p.id] }
     end
 
     def edit
@@ -39,10 +31,10 @@ class BuildsController < ApplicationController
         respond_to do |format|
             if @build.save
                 format.html { redirect_to @build, notice: "Build was successfully created." }
-                # format.json { render :show, status: :created, location: @build }
+                format.json { render :show, status: :created, location: @build }
             else
                 format.html { render :edit, status: :unprocessable_entity }
-                # format.json { render json: @build.errors, status: :unprocessable_entity }
+                format.json { render json: @build.errors, status: :unprocessable_entity }
             end
         end
     end
@@ -51,7 +43,7 @@ class BuildsController < ApplicationController
         @build.destroy
         respond_to do |format|
             format.html { redirect_to builds_url, notice: "Build was successfully destroyed." }
-            # format.json { head :no_content }
+            format.json { head :no_content }
         end
     end
 

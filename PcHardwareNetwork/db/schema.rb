@@ -10,21 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_10_120929) do
+ActiveRecord::Schema.define(version: 2021_02_10_164111) do
 
   create_table "builds", force: :cascade do |t|
     t.string "name"
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "processor_id"
+    t.integer "pc_case_id"
     t.integer "processor_cooler_id"
     t.integer "video_card_id"
     t.integer "memory_id"
     t.integer "storage_id"
-    t.integer "power_supply_id"
     t.integer "motherboard_id"
-    t.integer "processor_id"
-    t.integer "pc_case_id"
+    t.integer "power_supply_id"
     t.index ["memory_id"], name: "index_builds_on_memory_id"
     t.index ["motherboard_id"], name: "index_builds_on_motherboard_id"
     t.index ["pc_case_id"], name: "index_builds_on_pc_case_id"
