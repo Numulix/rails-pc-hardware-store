@@ -1,4 +1,3 @@
-<p id="notice"><%= notice %></p>
 
 <h1>Pc Cases</h1>
 
@@ -31,8 +30,10 @@
         <td><%= pc_case.internal_bays %></td>
         <td>$<%= pc_case.price %></td>
         <td><%= link_to 'Show', pc_case %></td>
+        <% if current_user && current_user.admin %>
         <td><%= link_to 'Edit', edit_pc_case_path(pc_case) %></td>
         <td><%= link_to 'Destroy', pc_case, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

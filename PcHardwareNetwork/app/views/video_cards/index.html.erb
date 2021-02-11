@@ -1,4 +1,3 @@
-<p id="notice"><%= notice %></p>
 
 <h1>Video Cards</h1>
 
@@ -31,8 +30,10 @@
         <td><%= video_card.length %> mm</td>
         <td>$<%= video_card.price %></td>
         <td><%= link_to 'Show', video_card %></td>
+        <% if current_user && current_user.admin %>
         <td><%= link_to 'Edit', edit_video_card_path(video_card) %></td>
         <td><%= link_to 'Destroy', video_card, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

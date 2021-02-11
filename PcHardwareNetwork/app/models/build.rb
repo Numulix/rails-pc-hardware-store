@@ -9,8 +9,8 @@ class Build < ApplicationRecord
     belongs_to :storage
     belongs_to :pc_case
 
-    has_many :comments
+    has_many :comments, dependent: :delete_all
 
-    has_many :purchases
+    has_many :purchases, dependent: :delete_all
     has_many :users, :through => :purchases
 end

@@ -31,8 +31,10 @@
             <tbody>
                 <% @user.purchases.each do |purchase| %>
                     <tr>
+                        <% if purchase.build %>
                         <td><%= purchase.build.name %></td>
                         <td>$<%= purchase.purchased_price %></td>
+                        <% end %>
                     </tr>
                 <% end %>
             </tbody>

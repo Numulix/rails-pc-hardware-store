@@ -1,4 +1,3 @@
-<p id="notice"><%= notice %></p>
 
 <h1>Storages</h1>
 
@@ -29,8 +28,10 @@
         <td><%= storage.interface %></td>
         <td>$<%= storage.price %></td>
         <td><%= link_to 'Show', storage %></td>
+        <% if current_user && current_user.admin %>
         <td><%= link_to 'Edit', edit_storage_path(storage) %></td>
         <td><%= link_to 'Destroy', storage, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

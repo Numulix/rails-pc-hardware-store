@@ -8,4 +8,6 @@ class Processor < ApplicationRecord
     validates :integrated_graphics, presence: true
     validates :smt, presence: true
     validates :price, presence: true, numericality: { only_integer: true, greater_than: 0 }
+
+    has_one :build, dependent: :destroy
 end

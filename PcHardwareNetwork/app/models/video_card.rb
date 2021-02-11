@@ -8,4 +8,6 @@ class VideoCard < ApplicationRecord
     validates :color, presence: true
     validates :length, presence: true, numericality: { only_integer: true, greater_than: 0 }
     validates :price, presence: true, numericality: { only_integer: true, greater_than: 0 }
+
+    has_one :build, dependent: :destroy
 end

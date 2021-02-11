@@ -12,7 +12,17 @@ class VideoCardsController < ApplicationController
 
   # GET /video_cards/new
   def new
-    @video_card = VideoCard.new
+    if current_user
+      if current_user.admin
+        @video_card = VideoCard.new
+      else
+        flash[:alert] = "You need to be logged in as admin to add hardware"
+        redirect_to root_path
+      end
+    else
+      flash[:alert] = "Log in with an admin account"
+      redirect_to new_user_session_path
+    end
   end
 
   # GET /video_cards/1/edit
@@ -21,17 +31,17 @@ class VideoCardsController < ApplicationController
 
   # POST /video_cards or /video_cards.json
   def create
-    @video_card = VideoCard.new(video_card_params)
+      @video_card = VideoCard.new(video_card_params)
 
-    respond_to do |format|
-      if @video_card.save
-        format.html { redirect_to @video_card, notice: "Video card was successfully created." }
-        format.json { render :show, status: :created, location: @video_card }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @video_card.errors, status: :unprocessable_entity }
+      respond_to do |format|
+        if @video_card.save
+          format.html { redirect_to @video_card, notice: "Video card was successfully created." }
+          format.json { render :show, status: :created, location: @video_card }
+        else
+          format.html { render :new, status: :unprocessable_entity }
+          format.json { render json: @video_card.errors, status: :unprocessable_entity }
+        end
       end
-    end
   end
 
   # PATCH/PUT /video_cards/1 or /video_cards/1.json

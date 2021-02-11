@@ -12,7 +12,17 @@ class PowerSuppliesController < ApplicationController
 
   # GET /power_supplies/new
   def new
-    @power_supply = PowerSupply.new
+    if current_user
+      if current_user.admin
+        @power_supply = PowerSupply.new
+      else
+        flash[:alert] = "You need to be logged in as admin to add hardware"
+        redirect_to root_path
+      end
+    else
+      flash[:alert] = "Log in with an admin account"
+      redirect_to new_user_session_path
+    end
   end
 
   # GET /power_supplies/1/edit

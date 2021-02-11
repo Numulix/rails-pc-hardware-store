@@ -1,5 +1,6 @@
 class MemoriesController < ApplicationController
   before_action :set_memory, only: %i[ show edit update destroy ]
+  before_action :authenticate_user!, only: %i[ new edit ]
 
   # GET /memories or /memories.json
   def index
@@ -12,7 +13,17 @@ class MemoriesController < ApplicationController
 
   # GET /memories/new
   def new
-    @memory = Memory.new
+    if current_user
+      if current_user.admin
+        @memory = Memory.new
+      else
+        flash[:alert] = "You need to be logged in as admin to add hardware"
+        redirect_to root_path
+      end
+    else
+      flash[:alert] = "Log in with an admin account"
+      redirect_to new_user_session_path
+    end
   end
 
   # GET /memories/1/edit

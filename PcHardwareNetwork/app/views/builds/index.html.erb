@@ -1,4 +1,3 @@
-<p id="notice"><%= notice %></p>
 
 <h1>Builds</h1>
 
@@ -31,8 +30,10 @@
         <td><%= link_to build.motherboard.name, motherboard_path(build.motherboard.id) %></td>
         <td><%= link_to build.pc_case.name, pc_case_path(build.pc_case.id) %></td>
         <td><%= link_to 'Show', build %></td>
+        <% if current_user && current_user.admin %>
         <td><%= link_to 'Edit', edit_build_path(build) %></td>
         <td><%= link_to 'Destroy', build, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

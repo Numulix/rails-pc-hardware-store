@@ -6,4 +6,6 @@ class ProcessorCooler < ApplicationRecord
     validates :color, presence: true
     validates :radiator_size, presence: true, numericality: { only_integer: true, greater_than: 0 }
     validates :price, presence: true, numericality: { only_integer: true, greater_than: 0 }
+
+    has_one :build, dependent: :destroy
 end

@@ -12,7 +12,17 @@ class PcCasesController < ApplicationController
 
   # GET /pc_cases/new
   def new
-    @pc_case = PcCase.new
+    if current_user
+      if current_user.admin
+        @pc_case = PcCase.new
+      else
+        flash[:alert] = "You need to be logged in as admin to add hardware"
+        redirect_to root_path
+      end
+    else
+      flash[:alert] = "Log in with an admin account"
+      redirect_to new_user_session_path
+    end
   end
 
   # GET /pc_cases/1/edit

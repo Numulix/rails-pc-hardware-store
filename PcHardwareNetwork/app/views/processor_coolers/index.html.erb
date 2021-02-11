@@ -26,8 +26,10 @@
         <td><%= processor_cooler.radiator_size %> mm</td>
         <td>$<%= processor_cooler.price %></td>
         <td><%= link_to 'Show', processor_cooler %></td>
+        <% if current_user && current_user.admin %>
         <td><%= link_to 'Edit', edit_processor_cooler_path(processor_cooler) %></td>
         <td><%= link_to 'Destroy', processor_cooler, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

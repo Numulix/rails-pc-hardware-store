@@ -12,7 +12,17 @@ class ProcessorCoolersController < ApplicationController
 
   # GET /processor_coolers/new
   def new
-    @processor_cooler = ProcessorCooler.new
+    if current_user
+      if current_user.admin
+        @processor_cooler = ProcessorCooler.new
+      else
+        flash[:alert] = "You need to be logged in as admin to add hardware"
+        redirect_to root_path
+      end
+    else
+      flash[:alert] = "Log in with an admin account"
+      redirect_to new_user_session_path
+    end
   end
 
   # GET /processor_coolers/1/edit

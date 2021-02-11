@@ -60,7 +60,7 @@
         <h2>Comments</h2>
 
         <div class="card">
-            <% @build.comments.each do |comment| %>
+            <% @build.comments.order('created_at DESC').each do |comment| %>
             <div class="card-body">
                 <h4 class="text-left"><%= comment.user.email %></h4>
                 <p class="card-text"><%= comment.description %></p>
@@ -83,7 +83,12 @@
 
         <hr/>
 
-        <h3>Purchased: <%= Purchase.where(build_id: @build.id).size %></h3>
+        <h3>Purchased: <%= @build.purchases.size %></h3>
+        <ul class="list-group">
+            <% @build.purchases.each do |purchase| %>
+                <li class="list-group-item"><%= purchase.user.email %> - $<%= purchase.purchased_price %></li>
+            <% end %>
+        </ul>
     </div>
 
 </div>

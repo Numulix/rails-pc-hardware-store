@@ -10,8 +10,13 @@
           <%= link_to "Home", root_path, class:"nav-link active" %>
         </li>
         <% if current_user %>
-        <li class="nav-item"><%= link_to current_user.email, "/users/#{current_user.id}" , class:"nav-link active" %></li>
+          <li class="nav-item"><%= link_to current_user.email, "/users/#{current_user.id}" , class:"nav-link active" %></li>
+          <li class="nav-item"><%= link_to "Post a Build", new_build_path , class:"nav-link active" %></li>
+          <li class="nav-item"><%= link_to "Purchase Build", new_purchase_path , class:"nav-link active" %></li>
         <% end %>
+        <li class="nav-item">
+          <%= link_to "Builds", builds_path, class:"nav-link active" %>
+        </li>
       </ul>
     </div>
   </div>

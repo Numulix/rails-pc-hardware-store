@@ -1,4 +1,3 @@
-<p id="notice"><%= notice %></p>
 
 <h1>Power Supplies</h1>
 
@@ -29,8 +28,10 @@
         <td><%= power_supply.color %></td>
         <td><%= power_supply.price %></td>
         <td><%= link_to 'Show', power_supply %></td>
+        <% if current_user && current_user.admin %>
         <td><%= link_to 'Edit', edit_power_supply_path(power_supply) %></td>
         <td><%= link_to 'Destroy', power_supply, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>

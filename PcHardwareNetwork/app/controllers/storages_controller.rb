@@ -12,7 +12,17 @@ class StoragesController < ApplicationController
 
   # GET /storages/new
   def new
-    @storage = Storage.new
+    if current_user
+      if current_user.admin
+        @storage = Storage.new
+      else
+        flash[:alert] = "You need to be logged in as admin to add hardware"
+        redirect_to root_path
+      end
+    else
+      flash[:alert] = "Log in with an admin account"
+      redirect_to new_user_session_path
+    end
   end
 
   # GET /storages/1/edit

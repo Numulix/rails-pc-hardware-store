@@ -7,4 +7,6 @@ class PowerSupply < ApplicationRecord
     validates :modular, presence: true
     validates :color, presence: true
     validates :price, presence: true, numericality: { only_integer: true, greater_than: 0 }
+
+    has_one :build, dependent: :destroy
 end
