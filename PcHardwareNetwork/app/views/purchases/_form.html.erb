@@ -1,0 +1,17 @@
+<%= bootstrap_form_with(url: '/purchases', method: :post, model: purchase) do |form| %>
+
+    <%= form.hidden_field :user_id, value: current_user.id %>
+    <div class="field">
+        <%= form.label :build_id %>
+        <%= select_tag(:build_id, options_for_select(Build.all.map { |p| ["#{p.name} - $#{total_price(p)}", p.id] }), :prompt => "Select a build") %>
+    </div>
+
+    <div class="field">
+        <%= form.number_field :purchased_price %>
+    </div>
+
+    <br/>
+    <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -5,4 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :builds
   has_many :comments
+
+  has_many :purchases
+  has_many :builds, :through => :purchases
 end

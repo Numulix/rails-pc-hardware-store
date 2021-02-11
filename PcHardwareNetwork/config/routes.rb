@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   resources :processors
   resources :builds
   resources :comments
+  resources :purchases
   root 'static_pages#home'
   match '/users', to: 'users#index', via: 'get'
   match '/users/:id', to: 'users#show', via: 'get'

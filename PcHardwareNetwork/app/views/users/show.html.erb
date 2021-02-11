@@ -1,18 +1,44 @@
 <% if @user %>
-<h1 class="text-center"><%= @user.email %></h1>
-<h2 class="text-center"><%= link_to "Edit Profile", '/users/edit' %></h2>
-<br/>
+    <h1 class="text-center"><%= @user.email %></h1>
 
-<% if @user.builds.empty? %>
-    <h1>No builds to show off :(</h1>
-<% else %>
-    <h2>All user builds:</h2>
-    <ul class="list-group">
-    <% @user.builds.each do |build| %>
-        <li class="list-group-item"><%= link_to build.name, "/builds/#{build.id}" %></li>
+    <% if current_user && @user.id == current_user.id %>
+        <h2 class="text-center"><%= link_to "Edit Profile", '/users/edit' %></h2>
     <% end %>
-    </ul>
-<% end %>
+<br/>
+<hr/>
+<div class="row">
+    <div class="col-md-6">
+        <% if @user.builds.empty? %>
+            <h1>No builds to show off :(</h1>
+        <% else %>
+            <h2>All user builds:</h2>
+            <ul class="list-group">
+            <% Build.where(user_id: @user.id).each do |build| %>
+                <li class="list-group-item"><%= link_to build.name, "/builds/#{build.id}" %></li>
+            <% end %>
+            </ul>
+        <% end %>
+    </div>
+    
+    <div class="col-md-6">
+        <h2>Purchased builds: <%= @user.purchases.size %></h2>
+        <table class="table">
+            <thead>
+                <th>Build name</th>
+                <th>Purchased price</th>
+            </thead>
+
+            <tbody>
+                <% @user.purchases.each do |purchase| %>
+                    <tr>
+                        <td><%= purchase.build.name %></td>
+                        <td>$<%= purchase.purchased_price %></td>
+                    </tr>
+                <% end %>
+            </tbody>
+        </table>
+    </div>
+</div>
 
 <% else %>
 <h1>User not found!</h1>

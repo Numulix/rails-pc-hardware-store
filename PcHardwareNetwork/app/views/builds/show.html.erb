@@ -76,9 +76,14 @@
         <% if current_user %>
             <%= render 'comments/form', comment: @comment, build: @build %>
         <% else %>
+            <br/>
             <h3>You need to login to leave a comment</h3>
             <%= link_to "Log in", new_user_session_path, class:"btn btn-lg btn-primary" %>
         <% end %>
+
+        <hr/>
+
+        <h3>Purchased: <%= Purchase.where(build_id: @build.id).size %></h3>
     </div>
 
 </div>

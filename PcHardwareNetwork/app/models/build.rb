@@ -10,5 +10,7 @@ class Build < ApplicationRecord
     belongs_to :pc_case
 
     has_many :comments
-    has_many :users, through: :comments
+
+    has_many :purchases
+    has_many :users, :through => :purchases
 end
