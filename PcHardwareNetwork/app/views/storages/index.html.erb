@@ -22,12 +22,12 @@
       <tr>
         <td><%= storage.brand %></td>
         <td><%= storage.name %></td>
-        <td><%= storage.capacity %></td>
+        <td><%= storage_gb_tb(storage) %></td>
         <td><%= storage.storage_type %></td>
         <td><%= storage.cache %></td>
         <td><%= storage.form_factor %></td>
         <td><%= storage.interface %></td>
-        <td><%= storage.price %></td>
+        <td>$<%= storage.price %></td>
         <td><%= link_to 'Show', storage %></td>
         <td><%= link_to 'Edit', edit_storage_path(storage) %></td>
         <td><%= link_to 'Destroy', storage, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -10,4 +10,5 @@ class Build < ApplicationRecord
     belongs_to :pc_case
 
     has_many :comments
+    has_many :users, through: :comments
 end

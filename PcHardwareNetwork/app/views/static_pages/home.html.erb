@@ -1,19 +1,57 @@
 <div class="center jumbotron">
-  <% if current_user %>
-  <h1>Welcome to the Sample App, <%= current_user.email %></h1>
-  <% else %>
-  <h1>Welcome to the Sample App</h1>
-  <% end %>
 
-  <h2>
-    This is the home page for the Ruby on Rails Tutorial
-    sample application.
-  </h2>
+  <div class="text-end">
+    <% if current_user %>
+    <%= link_to "Log out", destroy_user_session_path, method: :delete, class:"btn btn-lg btn-primary" %>
+    <% else %>
+    <%= link_to "Sign in", new_user_session_path, class:"btn btn-lg btn-primary" %>
+    <%= link_to "Sign up", new_user_registration_path, class:"btn btn-lg btn-primary" %>
+    <% end %>
+  </div>
+
+  <ul class="nav">
+    <li class="nav-item">
+      <%= link_to 'Processors', processors_path, class:"nav-link active" %>
+    </li>
+    <li class="nav-item">
+      <%= link_to 'Processor Coolers', processor_coolers_path, class:"nav-link active" %>
+    </li>
+    <li class="nav-item">
+      <%= link_to 'Video Cards', video_cards_path, class:"nav-link active" %>
+    </li>
+    <li class="nav-item">
+      <%= link_to 'Memories', memories_path, class:"nav-link active" %>
+    </li>
+    <li class="nav-item">
+      <%= link_to 'Storages', storages_path, class:"nav-link active" %>
+    </li>
+    <li class="nav-item">
+      <%= link_to 'Motherboards', motherboards_path, class:"nav-link active" %>
+    </li>
+    <li class="nav-item">
+      <%= link_to 'Power Supplies', power_supplies_path, class:"nav-link active" %>
+    </li>
+    <li class="nav-item">
+      <%= link_to 'Cases', pc_cases_path, class:"nav-link active" %>
+    </li>
+  </ul>
+
+  <div class="card">
+    <div class="card-body">
+    <% if current_user %>
+    <h1 class="card-title">Welcome to the PC Builders Network, <%= username(current_user) %></h1>
+    <% else %>
+    <h1 class="card-title">Welcome to the PC Builders Network</h1>
+    <% end %>
+
+    <h4 class="card-text">
+      Connect with the community and share your PC Builds
+      across the web and give your thoughts and recommendations
+      on others' builds.
+    </h4>
+    </div>
+    <%= image_tag "pc-master-race.jpg", alt: "GLORIOUS PC MASTER RACE" %>
+  </div>
+
   
-  <% if current_user %>
-  <%= link_to "Log out", destroy_user_session_path, method: :delete, class:"btn btn-lg btn-primary" %>
-  <% else %>
-  <%= link_to "Sign in", new_user_session_path, class:"btn btn-lg btn-primary" %>
-  <%= link_to "Sign up", new_user_registration_path, class:"btn btn-lg btn-primary" %>
-  <% end %>
 </div>

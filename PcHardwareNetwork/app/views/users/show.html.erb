@@ -1,13 +1,17 @@
 <% if @user %>
-<h1><%= @user.email %></h1>
+<h1 class="text-center"><%= @user.email %></h1>
+<h2 class="text-center"><%= link_to "Edit Profile", '/users/edit' %></h2>
+<br/>
 
 <% if @user.builds.empty? %>
     <h1>No builds to show off :(</h1>
 <% else %>
+    <h2>All user builds:</h2>
+    <ul class="list-group">
     <% @user.builds.each do |build| %>
-        <p><%= link_to build.name, "/builds/#{build.id}" %></p>
-        <br/>
+        <li class="list-group-item"><%= link_to build.name, "/builds/#{build.id}" %></li>
     <% end %>
+    </ul>
 <% end %>
 
 <% else %>

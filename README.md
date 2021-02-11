@@ -17,7 +17,7 @@ This project was done as a university assignment for the course Scripting Langua
 - [X] Use of helpers required
 - [ ] Implement a reasonable amount of views, such as to support all REST operations on the controllers
 - [ ] Flash messages on successful operations
-- [ ] Pagination required (example of listing all users)
+- [X] Pagination required (example of listing all users)
 - [ ] All in all, it should look like a production ready web app, polished (all links should be functional, every action should redirect to the correct address, etc.)
 
 FUNCTIONALITY >> DESIGN

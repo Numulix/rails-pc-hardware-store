@@ -5,6 +5,7 @@ class CommentsController < ApplicationController
         
         respond_to do |format|
             if @comment.save
+                flash[:notice] = "Comment added successfully"
                 format.html { redirect_to @comment.build }
             else
                 format.html { redirect_to @comment.build, status: :unprocessable_entity }

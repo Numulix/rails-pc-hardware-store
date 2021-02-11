@@ -14,9 +14,16 @@
   <body>
     <%= render "layouts/navbar" %>
     <div class="container">
-      <p class="notice alert-info"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-      <%= yield %>
+      <br/>
+      <div class="row">
+        <% if notice %>
+          <p class="alert alert-info"><%= notice %></p>
+        <% end %>
+        <% if alert %>
+          <p class="alert alert-danger"><%= alert %></p>
+        <% end %>
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>

@@ -29,7 +29,7 @@
         <td><%= pc_case.side_panel_window %></td>
         <td><%= pc_case.external_bays %></td>
         <td><%= pc_case.internal_bays %></td>
-        <td><%= pc_case.price %></td>
+        <td>$<%= pc_case.price %></td>
         <td><%= link_to 'Show', pc_case %></td>
         <td><%= link_to 'Edit', edit_pc_case_path(pc_case) %></td>
         <td><%= link_to 'Destroy', pc_case, method: :delete, data: { confirm: 'Are you sure?' } %></td>
