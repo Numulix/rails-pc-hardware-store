@@ -8,4 +8,6 @@ class Build < ApplicationRecord
     belongs_to :power_supply
     belongs_to :storage
     belongs_to :pc_case
+
+    has_many :comments
 end

@@ -3,7 +3,7 @@ class ProcessorCoolersController < ApplicationController
 
   # GET /processor_coolers or /processor_coolers.json
   def index
-    @processor_coolers = ProcessorCooler.all
+    @processor_coolers = ProcessorCooler.paginate(page: params[:page], per_page: 4)
   end
 
   # GET /processor_coolers/1 or /processor_coolers/1.json

@@ -3,7 +3,7 @@ class PcCasesController < ApplicationController
 
   # GET /pc_cases or /pc_cases.json
   def index
-    @pc_cases = PcCase.all
+    @pc_cases = PcCase.paginate(page: params[:page], per_page: 4)
   end
 
   # GET /pc_cases/1 or /pc_cases/1.json

@@ -14,7 +14,7 @@ This project was done as a university assignment for the course Scripting Langua
 - [X] Most of the tables/models should have their own controller, with basic RESTful operations
 - [X] Controllers should adequately respond to HTTP requests, as well as JSON
 - [X] Use of partials for rendering
-- [ ] Use of helpers required
+- [X] Use of helpers required
 - [ ] Implement a reasonable amount of views, such as to support all REST operations on the controllers
 - [ ] Flash messages on successful operations
 - [ ] Pagination required (example of listing all users)

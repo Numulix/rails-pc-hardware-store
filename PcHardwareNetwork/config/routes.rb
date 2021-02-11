@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :processor_coolers
   resources :processors
   resources :builds
+  resources :comments
   root 'static_pages#home'
   match '/users', to: 'users#index', via: 'get'
   match '/users/:id', to: 'users#show', via: 'get'

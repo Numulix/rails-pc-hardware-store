@@ -1,5 +1,15 @@
 <% if @user %>
 <h1><%= @user.email %></h1>
+
+<% if @user.builds.empty? %>
+    <h1>No builds to show off :(</h1>
+<% else %>
+    <% @user.builds.each do |build| %>
+        <p><%= link_to build.name, "/builds/#{build.id}" %></p>
+        <br/>
+    <% end %>
+<% end %>
+
 <% else %>
 <h1>User not found!</h1>
 <% end %>

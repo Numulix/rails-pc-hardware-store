@@ -3,7 +3,7 @@ class StoragesController < ApplicationController
 
   # GET /storages or /storages.json
   def index
-    @storages = Storage.all
+    @storages = Storage.paginate(page: params[:page], per_page: 4)
   end
 
   # GET /storages/1 or /storages/1.json

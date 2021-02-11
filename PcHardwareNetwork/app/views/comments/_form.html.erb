@@ -1,0 +1,13 @@
+<%= bootstrap_form_with(url: '/comments', method: :post, model: comment) do |form| %>
+
+    <%= form.hidden_field :build_id, value: build.id %>
+    <%= form.hidden_field :user_id, value: current_user.id %>
+    <div class="field">
+        <%= form.text_area :description %>
+    </div>
+    <br/>
+    <div class="actions">
+        <%= form.submit %>
+    <div>
+
+<% end %>

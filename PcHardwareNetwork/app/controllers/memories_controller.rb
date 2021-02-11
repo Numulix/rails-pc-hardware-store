@@ -3,7 +3,7 @@ class MemoriesController < ApplicationController
 
   # GET /memories or /memories.json
   def index
-    @memories = Memory.all
+    @memories = Memory.paginate(page: params[:page], per_page: 4)
   end
 
   # GET /memories/1 or /memories/1.json

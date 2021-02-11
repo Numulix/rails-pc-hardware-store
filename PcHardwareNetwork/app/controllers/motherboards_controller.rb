@@ -3,7 +3,7 @@ class MotherboardsController < ApplicationController
 
   # GET /motherboards or /motherboards.json
   def index
-    @motherboards = Motherboard.all
+    @motherboards = Motherboard.paginate(page: params[:page], per_page: 4)
   end
 
   # GET /motherboards/1 or /motherboards/1.json

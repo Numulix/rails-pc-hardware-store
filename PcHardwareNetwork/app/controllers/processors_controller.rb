@@ -3,7 +3,7 @@ class ProcessorsController < ApplicationController
 
   # GET /processors or /processors.json
   def index
-    @processors = Processor.all
+    @processors = Processor.paginate(page: params[:page], per_page: 4)
   end
 
   # GET /processors/1 or /processors/1.json

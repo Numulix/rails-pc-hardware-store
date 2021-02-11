@@ -3,7 +3,7 @@ class PowerSuppliesController < ApplicationController
 
   # GET /power_supplies or /power_supplies.json
   def index
-    @power_supplies = PowerSupply.all
+    @power_supplies = PowerSupply.paginate(page: params[:page], per_page: 4)
   end
 
   # GET /power_supplies/1 or /power_supplies/1.json

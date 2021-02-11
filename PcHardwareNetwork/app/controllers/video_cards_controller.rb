@@ -3,7 +3,7 @@ class VideoCardsController < ApplicationController
 
   # GET /video_cards or /video_cards.json
   def index
-    @video_cards = VideoCard.all
+    @video_cards = VideoCard.paginate(page: params[:page], per_page: 4)
   end
 
   # GET /video_cards/1 or /video_cards/1.json
