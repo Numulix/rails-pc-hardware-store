@@ -1,39 +1,38 @@
-<p id="notice"><%= notice %></p>
-
-<p>
+<div class="text-center">
+<h3>
   <strong>Brand:</strong>
   <%= @memory.brand %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Name:</strong>
   <%= @memory.name %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Speed:</strong>
   <%= @memory.speed %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Size:</strong>
   <%= @memory.size %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Color:</strong>
   <%= @memory.color %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Cas latency:</strong>
   <%= @memory.cas_latency %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Price:</strong>
   <%= @memory.price %>
-</p>
-
-<%= link_to 'Edit', edit_memory_path(@memory) %> |
-<%= link_to 'Back', memories_path %>
+</h3>
+</div>
+<%= link_to 'Edit', edit_memory_path(@memory), class:"btn btn-primary" %> 
+<%= link_to 'Back', memories_path, class:"btn btn-primary" %>

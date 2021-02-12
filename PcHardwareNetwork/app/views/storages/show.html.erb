@@ -1,44 +1,43 @@
-<p id="notice"><%= notice %></p>
-
-<p>
+<div class="text-center">
+<h3>
   <strong>Brand:</strong>
   <%= @storage.brand %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Name:</strong>
   <%= @storage.name %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Capacity:</strong>
   <%= @storage.capacity %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Storage type:</strong>
   <%= @storage.storage_type %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Cache:</strong>
   <%= @storage.cache %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Form factor:</strong>
   <%= @storage.form_factor %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Interface:</strong>
   <%= @storage.interface %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Price:</strong>
   <%= @storage.price %>
-</p>
-
-<%= link_to 'Edit', edit_storage_path(@storage) %> |
-<%= link_to 'Back', storages_path %>
+</h3>
+</div>
+<%= link_to 'Edit', edit_storage_path(@storage), class:"btn btn-primary" %> 
+<%= link_to 'Back', storages_path, class:"btn btn-primary" %>

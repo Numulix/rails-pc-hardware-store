@@ -1,49 +1,48 @@
-<p id="notice"><%= notice %></p>
-
-<p>
+<div class="text-center">
+<h3>
   <strong>Brand:</strong>
   <%= @processor.brand %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Name:</strong>
   <%= @processor.name %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Core count:</strong>
   <%= @processor.core_count %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Core clock:</strong>
   <%= @processor.core_clock %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Boost clock:</strong>
   <%= @processor.boost_clock %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Tdp:</strong>
   <%= @processor.tdp %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Integrated graphics:</strong>
   <%= @processor.integrated_graphics %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Smt:</strong>
   <%= @processor.smt %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Price:</strong>
   <%= @processor.price %>
-</p>
-
-<%= link_to 'Edit', edit_processor_path(@processor) %> |
-<%= link_to 'Back', processors_path %>
+</h3>
+</div>
+<%= link_to 'Edit', edit_processor_path(@processor), class:"btn btn-primary" %> 
+<%= link_to 'Back', processors_path, class:"btn btn-primary" %>

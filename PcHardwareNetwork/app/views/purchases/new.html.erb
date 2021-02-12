@@ -1,3 +1,10 @@
+<% if Build.all.size == 0 %>
+
+<h1>There are no builds to purchase at the moment</h1>
+
+<% else %>
 <h1>You're about to purchase a build.</h1>
 
 <%= render 'form', purchase: @purchase %>
+
+<% end %>

@@ -1,49 +1,49 @@
-<p id="notice"><%= notice %></p>
+<div class="text-center">
 
-<p>
+<h3>
   <strong>Brand:</strong>
   <%= @pc_case.brand %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Name:</strong>
   <%= @pc_case.name %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Case type:</strong>
   <%= @pc_case.case_type %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Color:</strong>
   <%= @pc_case.color %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Power supply:</strong>
   <%= @pc_case.power_supply %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Side panel window:</strong>
   <%= @pc_case.side_panel_window %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>External bays:</strong>
   <%= @pc_case.external_bays %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Internal bays:</strong>
   <%= @pc_case.internal_bays %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Price:</strong>
   <%= @pc_case.price %>
-</p>
-
-<%= link_to 'Edit', edit_pc_case_path(@pc_case) %> |
-<%= link_to 'Back', pc_cases_path %>
+</h3>
+</div>
+<%= link_to 'Edit', edit_pc_case_path(@pc_case), class:"btn btn-primary" %> 
+<%= link_to 'Back', pc_cases_path, class:"btn btn-primary" %>

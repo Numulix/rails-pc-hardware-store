@@ -1,39 +1,38 @@
-<p id="notice"><%= notice %></p>
-
-<p>
+<div class="text-center">
+<h3>
   <strong>Brand:</strong>
   <%= @processor_cooler.brand %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Name:</strong>
   <%= @processor_cooler.name %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Fan rpm:</strong>
   <%= @processor_cooler.fan_rpm %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Noise level:</strong>
   <%= @processor_cooler.noise_level %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Color:</strong>
   <%= @processor_cooler.color %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Radiator size:</strong>
   <%= @processor_cooler.radiator_size %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Price:</strong>
   <%= @processor_cooler.price %>
-</p>
-
-<%= link_to 'Edit', edit_processor_cooler_path(@processor_cooler) %> |
-<%= link_to 'Back', processor_coolers_path %>
+</h3>
+</div>
+<%= link_to 'Edit', edit_processor_cooler_path(@processor_cooler), class:"btn btn-primary" %> 
+<%= link_to 'Back', processor_coolers_path, class:"btn btn-primary" %>

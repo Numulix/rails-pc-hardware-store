@@ -1,49 +1,48 @@
-<p id="notice"><%= notice %></p>
-
-<p>
+<div class="text-center">
+<h3>
   <strong>Brand:</strong>
   <%= @video_card.brand %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Name:</strong>
   <%= @video_card.name %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Chipset:</strong>
   <%= @video_card.chipset %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Memory:</strong>
   <%= @video_card.memory %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Core clock:</strong>
   <%= @video_card.core_clock %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Boost clock:</strong>
   <%= @video_card.boost_clock %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Color:</strong>
   <%= @video_card.color %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Length:</strong>
   <%= @video_card.length %>
-</p>
+</h3>
 
-<p>
+<h3>
   <strong>Price:</strong>
   <%= @video_card.price %>
-</p>
-
-<%= link_to 'Edit', edit_video_card_path(@video_card) %> |
-<%= link_to 'Back', video_cards_path %>
+</h3>
+</div>
+<%= link_to 'Edit', edit_video_card_path(@video_card), class:"btn btn-primary" %> 
+<%= link_to 'Back', video_cards_path, class:"btn btn-primary" %>
