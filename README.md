@@ -1,9 +1,12 @@
 # rails-pc-hardware-store
 This project was done as a university assignment for the course Scripting Languages
 
+# Deployed on Heroku
+https://aqueous-hamlet-82082.herokuapp.com/
+
 # TODO Tasks
 - [X] **At least 10 table models** (IMPORTANT)
-- [ ] Deployed on Heroku
+- [x] Deployed on Heroku
 - [X] Seeded database
 - [X] Login/Logout/Register/RememberMe implemented
 - [X] Must have a user with admin permissions (Adding new products to the database)
